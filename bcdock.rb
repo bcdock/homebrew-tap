@@ -5,13 +5,13 @@
 class Bcdock < Formula
   desc "Official CLI for BCDock - managed Business Central environments on Azure"
   homepage "https://bcdock.io"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bcdock/cli/releases/download/v0.5.1/bcdock_0.5.1_macos_x86_64.tar.gz"
-      sha256 "f37cdf95369aa6af36c1aa952b774a4de55bf6155c059f93fe65297645096a4a"
+      url "https://github.com/bcdock/cli/releases/download/v0.5.2/bcdock_0.5.2_macos_x86_64.tar.gz"
+      sha256 "3a4d4954bfb395b8c96ba0db5c467408dc9e419f33d7d49cd17ed24018020c50"
 
       define_method(:install) do
         bin.install "bcdock"
@@ -19,8 +19,8 @@ class Bcdock < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bcdock/cli/releases/download/v0.5.1/bcdock_0.5.1_macos_arm64.tar.gz"
-      sha256 "df9d9e0b9bced2ec4800fb857379519bf65b165c7a0635bec16f55515e6d3279"
+      url "https://github.com/bcdock/cli/releases/download/v0.5.2/bcdock_0.5.2_macos_arm64.tar.gz"
+      sha256 "65b7c9fb891608997eeb27528a7388f74a593e42160c742a6eb80e4f7c73e012"
 
       define_method(:install) do
         bin.install "bcdock"
@@ -31,16 +31,16 @@ class Bcdock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bcdock/cli/releases/download/v0.5.1/bcdock_0.5.1_linux_x86_64.tar.gz"
-      sha256 "251b995e633e85299e3b7419194e885dcdbf1eec55fc37a9f6d1cd3e1e37673d"
+      url "https://github.com/bcdock/cli/releases/download/v0.5.2/bcdock_0.5.2_linux_x86_64.tar.gz"
+      sha256 "23399be8c091b32e514a6a4d6e08fb3e324b8deaa526199803628f0f1cbac18c"
       define_method(:install) do
         bin.install "bcdock"
         man1.install Dir["man/man1/*.1"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bcdock/cli/releases/download/v0.5.1/bcdock_0.5.1_linux_arm64.tar.gz"
-      sha256 "a20b6a47aa2c214d4fa590e3c8eb2bbaa76266d9876c6dd97ec9b993ce6e7aff"
+      url "https://github.com/bcdock/cli/releases/download/v0.5.2/bcdock_0.5.2_linux_arm64.tar.gz"
+      sha256 "2e4903705666393a93e409294bbf8323c32fc49625c4935b382ffbd87fecf04b"
       define_method(:install) do
         bin.install "bcdock"
         man1.install Dir["man/man1/*.1"]
